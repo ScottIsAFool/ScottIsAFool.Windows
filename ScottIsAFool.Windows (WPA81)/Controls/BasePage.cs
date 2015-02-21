@@ -3,8 +3,8 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Cimbalino.Toolkit.Services;
-using ScottIsAFool.Windows.Core.Interfaces;
 using ScottIsAFool.Windows.Core.Logging;
+using ScottIsAFool.Windows.Core.ViewModel;
 using ScottIsAFool.Windows.Helpers;
 
 namespace ScottIsAFool.Windows.Controls

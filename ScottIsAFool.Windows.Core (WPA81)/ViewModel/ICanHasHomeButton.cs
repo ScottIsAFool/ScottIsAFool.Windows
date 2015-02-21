@@ -1,6 +1,6 @@
 using System.Windows.Input;
 
-namespace ScottIsAFool.Windows.Core.Interfaces
+namespace ScottIsAFool.Windows.Core.ViewModel
 {
     public interface ICanHasHomeButton
     {

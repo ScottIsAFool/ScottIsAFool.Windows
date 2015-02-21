@@ -90,6 +90,8 @@
     <Compile Include="Extensions\StoryboardExtensions.cs" />
     <Compile Include="Helpers\NavigationParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CameraInfoService.cs" />
+    <Compile Include="Services\DisplayRequestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cimbalino.Toolkit">
