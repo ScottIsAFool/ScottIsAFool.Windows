@@ -87,12 +87,15 @@
     <Compile Include="Extensions\AttributeExtensions.cs" />
     <Compile Include="Extensions\DictionaryExtensions.cs" />
     <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\ListTypeExtensions.cs" />
     <Compile Include="Extensions\StreamExtensions.cs" />
     <Compile Include="ViewModel\ICanHasHomeButton.cs" />
     <Compile Include="Logging\WinLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ICameraInfoService.cs" />
     <Compile Include="Services\IDisplayRequestService.cs" />
+    <Compile Include="ViewModel\IListType.cs" />
+    <Compile Include="ViewModel\ListType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cimbalino.Toolkit.Core">
