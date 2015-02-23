@@ -67,10 +67,16 @@ namespace ScottIsAFool.Windows.Controls
                 }
             }
 
-            var vm = DataContext as ICanHasHomeButton;
-            if (vm != null)
+            var homeVm = DataContext as ICanHasHomeButton;
+            if (homeVm != null)
             {
-                vm.ShowHomeButton = parameters != null && parameters.ShowHomeButton;
+                homeVm.ShowHomeButton = parameters != null && parameters.ShowHomeButton;
+            }
+
+            var navigationVm = DataContext as INavigatedToViewModel;
+            if (navigationVm != null)
+            {
+                navigationVm.NavigatedTo(e);
             }
 
             base.OnNavigatedTo(e);
@@ -96,6 +102,12 @@ namespace ScottIsAFool.Windows.Controls
                         Frame.BackStack.Remove(page);
                     }
                 }
+            }
+
+            var navigationVm = DataContext as INavigatedFromViewModel;
+            if (navigationVm != null)
+            {
+                navigationVm.NavigatedFrom(e);
             }
 
             Logger.Info("Navigated from {0}", GetType().FullName);

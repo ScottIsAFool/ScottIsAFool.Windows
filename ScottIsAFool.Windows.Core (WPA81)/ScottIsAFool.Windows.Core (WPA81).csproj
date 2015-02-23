@@ -95,6 +95,9 @@
     <Compile Include="Services\ICameraInfoService.cs" />
     <Compile Include="Services\IDisplayRequestService.cs" />
     <Compile Include="ViewModel\IListType.cs" />
+    <Compile Include="ViewModel\INavigatedFromViewModel.cs" />
+    <Compile Include="ViewModel\INavigatedToFromViewModel.cs" />
+    <Compile Include="ViewModel\INavigatedToViewModel.cs" />
     <Compile Include="ViewModel\ListType.cs" />
   </ItemGroup>
   <ItemGroup>
