@@ -1,11 +1,14 @@
-﻿using System.Linq;
-using Windows.UI.ViewManagement;
+﻿using System.Diagnostics;
+using System.Linq;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Cimbalino.Toolkit.Services;
 using ScottIsAFool.Windows.Core.Logging;
 using ScottIsAFool.Windows.Core.ViewModel;
 using ScottIsAFool.Windows.Helpers;
+#if WINDOWS_PHONE_APP
+using Windows.UI.ViewManagement;
+#endif
 
 namespace ScottIsAFool.Windows.Controls
 {
@@ -13,10 +16,12 @@ namespace ScottIsAFool.Windows.Controls
     {
         protected readonly ILog Logger;
         
+#if WINDOWS_PHONE_APP
         protected virtual ApplicationViewBoundsMode Mode
         {
             get { return ApplicationViewBoundsMode.UseVisible; }
         }
+#endif
 
         public abstract INavigationService NavigationService { get; }
 
@@ -30,9 +35,12 @@ namespace ScottIsAFool.Windows.Controls
         {
         }
 
-        protected void SetFullScreen(ApplicationViewBoundsMode mode)
+        [Conditional("WINDOWS_PHONE_APP")]
+        protected void SetFullScreen()
         {
-            ApplicationView.GetForCurrentView().SetDesiredBoundsMode(mode);
+#if WINDOWS_PHONE_APP
+            ApplicationView.GetForCurrentView().SetDesiredBoundsMode(Mode);
+#endif
         }
 
         protected virtual void InitialiseOnBack()
@@ -50,7 +58,7 @@ namespace ScottIsAFool.Windows.Controls
 
             Logger.Info("Navigated to {0}", GetType().FullName);
 
-            SetFullScreen(Mode);
+            SetFullScreen();
 
             if (e.NavigationMode == NavigationMode.Back)
             {
