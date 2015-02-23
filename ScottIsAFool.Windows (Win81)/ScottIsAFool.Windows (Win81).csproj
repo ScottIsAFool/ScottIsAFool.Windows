@@ -105,6 +105,30 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\BaseApplication.cs">
+      <Link>Controls\BaseApplication.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\BasePage.cs">
+      <Link>Controls\BasePage.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\LoadingListView.cs">
+      <Link>Controls\LoadingListView.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Extensions\ScrollViewerExtensions.cs">
+      <Link>Extensions\ScrollViewerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Extensions\StoryboardExtensions.cs">
+      <Link>Extensions\StoryboardExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Helpers\NavigationParameters.cs">
+      <Link>Helpers\NavigationParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Services\CameraInfoService.cs">
+      <Link>Services\CameraInfoService.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Services\DisplayRequestService.cs">
+      <Link>Services\DisplayRequestService.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +149,13 @@
       <Project>{f4348281-71a8-45d2-84e6-f480d88869ef}</Project>
       <Name>ScottIsAFool.Windows.Core %28Win81%29</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\ScottIsAFool.Windows %28WPA81%29\Themes\Generic.xaml">
+      <Link>Themes\Generic.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

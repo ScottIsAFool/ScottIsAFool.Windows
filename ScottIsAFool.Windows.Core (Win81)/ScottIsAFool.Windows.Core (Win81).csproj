@@ -105,6 +105,51 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Attributes\DescriptionAttribute.cs">
+      <Link>Attributes\DescriptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\AttributeExtensions.cs">
+      <Link>Extensions\AttributeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\DictionaryExtensions.cs">
+      <Link>Extensions\DictionaryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\ListExtensions.cs">
+      <Link>Extensions\ListExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\ListTypeExtensions.cs">
+      <Link>Extensions\ListTypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\StreamExtensions.cs">
+      <Link>Extensions\StreamExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Logging\WinLogger.cs">
+      <Link>Logging\WinLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Services\ICameraInfoService.cs">
+      <Link>Services\ICameraInfoService.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Services\IDisplayRequestService.cs">
+      <Link>Services\IDisplayRequestService.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\ViewModel\ICanHasHomeButton.cs">
+      <Link>ViewModel\ICanHasHomeButton.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\ViewModel\IListType.cs">
+      <Link>ViewModel\IListType.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\ViewModel\INavigatedFromViewModel.cs">
+      <Link>ViewModel\INavigatedFromViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\ViewModel\INavigatedToFromViewModel.cs">
+      <Link>ViewModel\INavigatedToFromViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\ViewModel\INavigatedToViewModel.cs">
+      <Link>ViewModel\INavigatedToViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\ViewModel\ListType.cs">
+      <Link>ViewModel\ListType.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
