@@ -24,7 +24,6 @@ namespace ScottIsAFool.Windows.Controls
         {
             NavigationCacheMode = NavigationCacheMode.Required;
             Logger = new WinLogger(GetType().FullName);
-            //_navigationService = SimpleIoc.Default.GetInstance<INavigationService>();
         }
 
         protected virtual void OnBackKeyPressed(object sender, NavigationServiceBackKeyPressedEventArgs e)
@@ -42,10 +41,12 @@ namespace ScottIsAFool.Windows.Controls
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+#if WINDOWS_PHONE_APP
             if (NavigationService != null)
             {
                 NavigationService.BackKeyPressed += OnBackKeyPressed;
             }
+#endif
 
             Logger.Info("Navigated to {0}", GetType().FullName);
 
@@ -77,10 +78,12 @@ namespace ScottIsAFool.Windows.Controls
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
+#if WINDOWS_PHONE_APP
             if (NavigationService != null)
             {
                 NavigationService.BackKeyPressed -= OnBackKeyPressed;
             }
+#endif
 
             if (e.NavigationMode != NavigationMode.Back)
             {
