@@ -123,6 +123,9 @@
     <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\StreamExtensions.cs">
       <Link>Extensions\StreamExtensions.cs</Link>
     </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\UriExtensions.cs">
+      <Link>Extensions\UriExtensions.cs</Link>
+    </Compile>
     <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Logging\WinLogger.cs">
       <Link>Logging\WinLogger.cs</Link>
     </Compile>
