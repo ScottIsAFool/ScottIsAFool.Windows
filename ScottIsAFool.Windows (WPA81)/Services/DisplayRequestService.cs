@@ -27,7 +27,7 @@ namespace ScottIsAFool.Windows.Services
 
         public void Release()
         {
-            if (_displayRequest == null)
+            if (_displayRequest == null || !IsActive)
             {
                 return;
             }
