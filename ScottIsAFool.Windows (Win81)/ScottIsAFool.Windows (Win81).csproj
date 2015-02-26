@@ -114,6 +114,9 @@
     <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\LoadingListView.cs">
       <Link>Controls\LoadingListView.cs</Link>
     </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Data\ItemTypeDataTemplateSelector.cs">
+      <Link>Data\ItemTypeDataTemplateSelector.cs</Link>
+    </Compile>
     <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Extensions\ScrollViewerExtensions.cs">
       <Link>Extensions\ScrollViewerExtensions.cs</Link>
     </Compile>

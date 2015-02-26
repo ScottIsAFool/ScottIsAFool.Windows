@@ -86,6 +86,7 @@
     <Compile Include="Controls\BaseApplication.cs" />
     <Compile Include="Controls\BasePage.cs" />
     <Compile Include="Controls\LoadingListView.cs" />
+    <Compile Include="Data\ItemTypeDataTemplateSelector.cs" />
     <Compile Include="Extensions\ScrollViewerExtensions.cs" />
     <Compile Include="Extensions\StoryboardExtensions.cs" />
     <Compile Include="Helpers\NavigationParameters.cs" />
