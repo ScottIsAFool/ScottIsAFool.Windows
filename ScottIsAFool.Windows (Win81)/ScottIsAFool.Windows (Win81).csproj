@@ -154,6 +154,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="..\ScottIsAFool.Windows %28WPA81%29\Themes\ControlStyles.xaml">
+      <Link>Themes\ControlStyles.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="..\ScottIsAFool.Windows %28WPA81%29\Themes\Generic.xaml">
       <Link>Themes\Generic.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
