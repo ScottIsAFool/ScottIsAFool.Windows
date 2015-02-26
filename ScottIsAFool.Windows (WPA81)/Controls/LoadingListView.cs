@@ -1,6 +1,7 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using ScottIsAFool.Windows.Core.Extensions;
 using WinRTXamlToolkit.Controls.Extensions;
 
 namespace ScottIsAFool.Windows.Controls
@@ -100,7 +101,7 @@ namespace ScottIsAFool.Windows.Controls
 
         public object GoToTopButton
         {
-            get { return (object)GetValue(GoToTopButtonProperty); }
+            get { return GetValue(GoToTopButtonProperty); }
             set { SetValue(GoToTopButtonProperty, value); }
         }
 
@@ -127,11 +128,11 @@ namespace ScottIsAFool.Windows.Controls
             DefaultStyleKey = typeof(LoadingListView);
         }
 
-        public void GoToTop()
+        public async void GoToTop()
         {
             if (_scrollViewer != null)
             {
-                _scrollViewer.ScrollToVerticalOffsetWithAnimation(0);
+                await _scrollViewer.ScrollToVerticalOffsetWithAnimation(0);
             }
         }
 
@@ -160,6 +161,12 @@ namespace ScottIsAFool.Windows.Controls
             ShowParts();
         }
 
+        protected override void OnItemsChanged(object e)
+        {
+            base.OnItemsChanged(e);
+            IsEmpty = Items.IsNullOrEmpty();
+        }
+
         private static void StateChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var listview = sender as LoadingListView;
@@ -171,9 +178,11 @@ namespace ScottIsAFool.Windows.Controls
 
         private void ShowParts()
         {
+            IsEmpty = Items.IsNullOrEmpty();
+
             if (_itemsPresenter != null)
             {
-                if ((LoadFailed || IsEmpty || IsInitialising))
+                if (LoadFailed || IsEmpty || IsInitialising)
                 {
                     _itemsPresenter.Visibility = Visibility.Collapsed;
                 }

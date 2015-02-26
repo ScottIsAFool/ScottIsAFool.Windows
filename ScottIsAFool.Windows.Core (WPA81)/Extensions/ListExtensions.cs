@@ -10,6 +10,11 @@ namespace ScottIsAFool.Windows.Core.Extensions
         {
             return list == null || !list.Any();
         }
+        
+        public static bool IsNullOrEmpty<T>(this IList<T> list)
+        {
+            return list == null || !list.Any();
+        }
 
         public static bool IsNullOrEmpty<T>(this Stack<T> stack)
         {
