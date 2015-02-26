@@ -16,7 +16,7 @@ namespace ScottIsAFool.Windows.Controls
         private ItemsPresenter _itemsPresenter;
 
         public static readonly DependencyProperty IsEmptyProperty = DependencyProperty.Register(
-            "IsEmpty", typeof(bool), typeof(LoadingListView), new PropertyMetadata(default(bool), StateChanged));
+            "IsEmpty", typeof(bool), typeof(LoadingListView), new PropertyMetadata(default(bool)));
 
         public bool IsEmpty
         {
@@ -165,6 +165,7 @@ namespace ScottIsAFool.Windows.Controls
         {
             base.OnItemsChanged(e);
             IsEmpty = Items.IsNullOrEmpty();
+            ShowParts();
         }
 
         private static void StateChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
