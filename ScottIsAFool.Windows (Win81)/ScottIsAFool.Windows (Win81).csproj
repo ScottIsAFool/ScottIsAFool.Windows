@@ -114,6 +114,12 @@
     <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\LoadingListView.cs">
       <Link>Controls\LoadingListView.cs</Link>
     </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\TapButton.cs">
+      <Link>Controls\TapButton.cs</Link>
+    </Compile>
+    <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Controls\TapHyperlinkButton.cs">
+      <Link>Controls\TapHyperlinkButton.cs</Link>
+    </Compile>
     <Compile Include="..\ScottIsAFool.Windows %28WPA81%29\Data\ItemTypeDataTemplateSelector.cs">
       <Link>Data\ItemTypeDataTemplateSelector.cs</Link>
     </Compile>
