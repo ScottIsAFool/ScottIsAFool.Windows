@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>ScottIsAFool.Windows</id>
+        <version>0.0.1.0-pre</version>
+        <authors>ScottIsAFool</authors>
+        <owners>ScottIsAFool</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This is a custom library used by Scott Lovegrove in his Windows Store apps.</description>
+        <dependencies>
+            <dependency id="ScottIsAFool.Windows.Core" version="0.0.1.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="Nuget\Main\lib\wpa81\ScottIsAFool.Windows.dll" target="lib\wpa81\ScottIsAFool.Windows.dll" />
+		<file src="Nuget\Main\lib\win81\ScottIsAFool.Windows.dll" target="lib\win81\ScottIsAFool.Windows.dll" />
+    </files>
+</package>
