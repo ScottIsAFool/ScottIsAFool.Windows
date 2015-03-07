@@ -176,32 +176,6 @@ namespace ScottIsAFool.Windows.Core.Logging
         {
             try
             {
-
-                //if (await CacheStorage.FileExistsAsync(LogFileName))
-                //{
-                //    // Delete log file if older than 5 days or told to delete it (ie, dump)
-                //    if ((DateTime.Now.Subtract(store.GetCreationTime(LogFileName).DateTime).TotalDays > LogConfiguration.MaxNumberOfDays
-                //         || deleteFileFirst))
-                //    {
-                //        store.DeleteFile(LogFileName);
-                //        fileStream = store.CreateFile(LogFileName);
-                //    }
-                //}
-                //else
-                //{
-                //    fileStream = store.CreateFile(LogFileName);
-                //}
-
-                //if (fileStream == null)
-                //{
-                //    fileStream = store.OpenFile(LogFileName, FileMode.Append, FileAccess.Write, FileShare.None);
-                //}
-
-                //using (TextWriter output = new StreamWriter(fileStream))
-                //{
-                //    output.WriteLine(messageLog);
-                //}
-
                 await _cacheStorage.WriteAllTextAsync(LogFileName, messageLog.ToString());
             }
             catch (Exception)

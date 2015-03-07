@@ -25,10 +25,15 @@ namespace ScottIsAFool.Windows.Controls
 
         public abstract INavigationService NavigationService { get; }
 
+        protected virtual NavigationCacheMode NavCacheMode
+        {
+            get { return NavigationCacheMode.Required; }
+        }
+
         protected BasePage()
         {
-            NavigationCacheMode = NavigationCacheMode.Required;
             Logger = new WinLogger(GetType().FullName);
+            Loaded += (sender, args) => NavigationCacheMode = NavCacheMode;
         }
 
         protected virtual void OnBackKeyPressed(object sender, NavigationServiceBackKeyPressedEventArgs e)

@@ -96,7 +96,7 @@
                                      Width="50"
                                      Height="50">
                                 <Border BorderThickness="1"
-                                        BorderBrush="{ThemeResource ButtonBackgroundBrush}"
+                                        BorderBrush="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}"
                                         Width="50"
                                         Height="50"
                                         CornerRadius="45"
@@ -104,12 +104,11 @@
                                         VerticalAlignment="Stretch"
                                         Padding="2">
                                     <Border CornerRadius="45"
-                                            Background="{ThemeResource ButtonBackgroundBrush}">
-                                        <TextBlock FontFamily="{StaticResource SegoeUISymbolsFont}"
-                                                   Text="&#xE1FE;"
+                                            Background="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}">
+                                        <TextBlock Text="Up"
                                                    HorizontalAlignment="Center"
                                                    VerticalAlignment="Center"
-                                                   Foreground="{ThemeResource DefaultUserBrush}"
+                                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"
                                                    FontSize="26.667"
                                                    Margin="1,0,0,3" />
                                     </Border>
@@ -197,7 +196,6 @@
                                                         HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                                                         VerticalAlignment="{TemplateBinding VerticalAlignment}"
                                                         Style="{TemplateBinding EmptyContentStyle}"
-                                                        Visibility="{Binding Tag, ElementName=InitialisedContent, Converter={StaticResource VisibilityConverter}}"
                                                         Grid.Row="1"
                                                         x:Name="EmptyContentControl" />
                                         <ContentControl ContentTemplate="{TemplateBinding LoadFailedContent}"
