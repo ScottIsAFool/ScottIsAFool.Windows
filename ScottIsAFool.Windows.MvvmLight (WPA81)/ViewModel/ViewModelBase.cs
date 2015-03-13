@@ -19,11 +19,6 @@ namespace ScottIsAFool.Windows.MvvmLight.ViewModel
         {
         }
 
-        public virtual bool IsPinned
-        {
-            get { return false; }
-        }
-
         public void SetProgressBar(string text)
         {
             ProgressIsVisible = true;
