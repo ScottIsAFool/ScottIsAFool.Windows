@@ -120,6 +120,9 @@
     <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\ListTypeExtensions.cs">
       <Link>Extensions\ListTypeExtensions.cs</Link>
     </Compile>
+    <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\StorageServiceExtensions.cs">
+      <Link>Extensions\StorageServiceExtensions.cs</Link>
+    </Compile>
     <Compile Include="..\ScottIsAFool.Windows.Core %28WPA81%29\Extensions\StreamExtensions.cs">
       <Link>Extensions\StreamExtensions.cs</Link>
     </Compile>
